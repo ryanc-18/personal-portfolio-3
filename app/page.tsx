@@ -1,6 +1,7 @@
 'use client';
 
 import PageLayout from '@/components/PageLayout';
+import { AutoScrollSkills } from '@/components/AutoScrollSkills';
 import Link from 'next/link';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -54,7 +55,7 @@ export default function Home() {
 
       {/* about me section */}
       <section id="about-me" className="flex min-h-screen">
-        <div className="flex flex-col items-start pl-50 mt-57">
+        <div className="flex flex-col items-start pl-50 mt-58">
           <h1 className="text-[10rem] font-bold text-black leading-none">
             WHO
           </h1>
@@ -100,19 +101,128 @@ export default function Home() {
       </section>
 
       <section id="skills" className="flex min-h-screen">
-        <div className="flex justify-center items-center w-full">
-          <div className="rounded-lg border border-gray-300 p-10 mt-5 mb-5">
-            <h1 className="text-5xl font-bold text-black">Everything I</h1>
-            <h1 className="text-5xl font-bold text-black justify-center flex">
-              dabble in
+        <div className="relative flex justify-center items-center w-full">
+          {/* box with text */}
+          <div className="relative rounded-lg border border-gray-300 p-10 mt-5 mb-5 h-110 items-end flex flex-col justify-end">
+            <span
+              className="absolute text-4xl font-bold text-black twinkle"
+              style={{ top: '45%', left: '10%', animationDelay: '0s' }}
+            >
+              ✦
+            </span>
+            <span
+              className="absolute text-4xl font-bold text-black twinkle"
+              style={{ top: '5%', left: '25%', animationDelay: '2.5s' }}
+            >
+              ✦
+            </span>
+            <span
+              className="absolute text-7xl font-bold text-black twinkle"
+              style={{ top: '27%', left: '30%', animationDelay: '0.625s' }}
+            >
+              ✦
+            </span>
+            <span
+              className="absolute text-4xl font-bold text-black twinkle"
+              style={{ top: '15%', left: '55%', animationDelay: '3.75s' }}
+            >
+              ✦
+            </span>
+            <span
+              className="absolute text-6xl font-bold text-black twinkle"
+              style={{ top: '49%', left: '60%', animationDelay: '1.25s' }}
+            >
+              ✦
+            </span>
+            <span
+              className="absolute text-7xl font-bold text-black twinkle"
+              style={{ top: '20%', left: '70%', animationDelay: '3.125s' }}
+            >
+              ✦
+            </span>
+            <span
+              className="absolute text-4xl font-bold text-black twinkle"
+              style={{ top: '2%', left: '80%', animationDelay: '4.375s' }}
+            >
+              ✦
+            </span>
+            <span
+              className="absolute text-7xl font-bold text-black twinkle"
+              style={{ top: '47%', left: '85%', animationDelay: '1.875s' }}
+            >
+              ✦
+            </span>
+            <h1 className="text-5xl font-bold text-black">EVERYTHING I</h1>
+            <h1
+              className="text-5xl font-bold text-black"
+              style={{ animationDelay: '0.2s' }}
+            >
+              DABBLE IN
             </h1>
           </div>
-          <div className="rounded-lg border border-gray-300 p-10 m-5"></div>
+
+          {/* auto scroll skills box */}
+          <div className="relative rounded-lg border border-gray-300 bg-gray-100 p-20 m-5 h-110 overflow-hidden">
+            <AutoScrollSkills />
+          </div>
         </div>
       </section>
 
       {/* projects section */}
       <section id="projects" className="flex min-h-screen">
+        <div className="flex flex-col items-center w-full">
+          <div className="relative">
+            <svg
+              className="absolute top-4 -left-20 z-10"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              style={{ opacity: 0.5 }}
+            >
+              <line
+                x1="20"
+                y1="0"
+                x2="20"
+                y2="40"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+              <line
+                x1="0"
+                y1="20"
+                x2="40"
+                y2="20"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              className="absolute top-4 -right-24 z-10"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              style={{ opacity: 0.5 }}
+            >
+              <line
+                x1="20"
+                y1="0"
+                x2="20"
+                y2="40"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+              <line
+                x1="0"
+                y1="20"
+                x2="40"
+                y2="20"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <h1 className="text-black text-7xl">THINGS I'VE BUILT</h1>
+          </div>
+        </div>
         {/* LIST OF PROJECTS I'VE DONE:
         - Grant outcome analysis tool - next.js, typescript, postgreSQL
         - Taxi game - java

@@ -2,30 +2,32 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function useScrollAnimation<T extends HTMLElement>() {
-    const ref = useRef<T>(null);
-    
-    useEffect(() => {
-        const element = ref.current;
-        if (!element) return;
+export function useScrollAnimation<T extends HTMLElement>(
+  visibleClass = 'fade-in-visible'
+) {
+  const ref = useRef<T>(null);
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in-visible');
-                    } else {
-                        entry.target.classList.remove('fade-in-visible');
-                    }
-                })
-            },
-            { threshold: 0.5 }
-        );
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
 
-        observer.observe(element);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(visibleClass);
+          } else {
+            entry.target.classList.remove(visibleClass);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-        return () => observer.disconnect();
-    }, []);
-    
-    return ref;
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [visibleClass]);
+
+  return ref;
 }
