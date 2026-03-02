@@ -3,16 +3,16 @@
 import { useEffect, useRef } from 'react';
 
 const skills = [
-  'information architecture',
-  'wireframing (low & high fid)',
-  'prototyping & user flow',
-  'usability testing',
-  'UI & visual design',
-  'database management',
-  'unit testing',
-  'API development',
-  'responsive design',
-  'version control (Git)',
+  'API DEVELOPMENT',
+  'DATABASE DESIGN',
+  'UI & VISUAL DESIGN',
+  'COMPONENT-BASED ARCHITECTURE',
+  'RESPONSIVE DESIGN',
+  'STAKEHOLDER COMMUNICATION',
+  'TEST-DRIVEN DEVELOPMENT',
+  'AGILE/SCRUM METHODOLOGIES',
+  'VERSION CONTROL (GIT)',
+  'DATA PROCESSING & ANALYSIS',
 ];
 
 export function AutoScrollSkills() {

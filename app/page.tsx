@@ -4,6 +4,7 @@ import PageLayout from '@/components/PageLayout';
 import { AutoScrollSkills } from '@/components/AutoScrollSkills';
 import Link from 'next/link';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { ProjectCard } from '@/components/ProjectCard';
 
 export default function Home() {
   const para1Ref = useScrollAnimation<HTMLParagraphElement>();
@@ -170,7 +171,7 @@ export default function Home() {
 
       {/* projects section */}
       <section id="projects" className="flex min-h-screen">
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full mt-20">
           <div className="relative">
             <svg
               className="absolute top-4 -left-20 z-10"
@@ -220,7 +221,53 @@ export default function Home() {
                 strokeWidth="1.5"
               />
             </svg>
-            <h1 className="text-black text-7xl">THINGS I'VE BUILT</h1>
+            <div className="flex flex-col items-center">
+              <h1 className="text-black font-semibold text-7xl">HERE'S WHAT</h1>
+              <h1 className="text-black font-semibold text-7xl">I'VE BUILT</h1>
+            </div>
+          </div>
+
+          {/* Horizontal scrolling container */}
+          <div className="relative w-[1100px] mx-auto mt-20">
+            {/* side gradients */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-100 to-transparent z-10 "></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-100 to-transparent z-10"></div>
+
+            {/* project cards */}
+            <div className="overflow-auto">
+              <div className="flex gap-8 pb-8 px-20 w-max">
+                <ProjectCard
+                  title="PORTFOLIO WEBSITE"
+                  description="YOU'RE LOOKING AT IT! A PERSONAL PORTFOLIO WEBSITE BUILT WITH NEXT.JS AND TAILWIND CSS."
+                  field="WEB DEVELOPMENT"
+                  role="FULL-STACK DEVELOPER"
+                />
+                <ProjectCard
+                  title="GRANT OUTCOME ANALYSIS TOOL"
+                  description="A DASHBOARD THAT ANALYSES THE OUTCOMES OF UNIVERSITY GRANTS, SUPPORTING INTERNAL REPORTING AND DECISION-MAKING."
+                  field="WEB DEVELOPMENT"
+                  role="BACKEND DEVELOPER"
+                />
+                <ProjectCard
+                  title="TAXI GAME"
+                  description="AN INTERACTIVE 2D TAXI SIMULATION GAME BUILT WITH JAVA."
+                  field="OBJECT-ORIENTED PROGRAMMING"
+                  role="SOLO DEVELOPER"
+                />
+                <ProjectCard
+                  title="TEXT AUTOCOMPLETION"
+                  description="A TOOL THAT SUGGESTS COMPLETIONS FOR TEXT INPUTS, BUILT USING C"
+                  field="ALGORITHMS AND DATA STRUCTURES"
+                  role="SOLO DEVELOPER"
+                />
+                <ProjectCard
+                  title="TRAFFIC SIGN PREDICTION"
+                  description="BUILT AND CRITICALLY ANALYSED SUPERVISED MACHINE LEARNING METHODS FOR CLASSIFYING GERMAN TRAFFIC SIGNS."
+                  field="MACHINE LEARNING"
+                  role="SOLO DEVELOPER"
+                />
+              </div>
+            </div>
           </div>
         </div>
         {/* LIST OF PROJECTS I'VE DONE:
