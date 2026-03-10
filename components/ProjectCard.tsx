@@ -1,8 +1,11 @@
+import Link from 'next/link';
+
 interface ProjectCardProps {
   title: string;
   description: string;
   field: string;
   role: string;
+  slug: string;
 }
 
 export const ProjectCard = ({
@@ -10,6 +13,7 @@ export const ProjectCard = ({
   description,
   field,
   role,
+  slug,
 }: ProjectCardProps) => {
   return (
     <div className="group relative w-[300px] h-[450px] border border-gray-300 rounded-3xl p-8 hover:bg-black transition-colors duration-300 flex-shrink-0 flex flex-col">
@@ -23,9 +27,12 @@ export const ProjectCard = ({
         </p>
       </div>
 
-      <button className="mt-auto mx-auto px-4 py-2 bg-gray-100 text-gray-500 rounded-lg hover:bg-gray-300 hover:scale-90 transition-all duration-300">
+      <Link
+        href={`/projects/${slug}`}
+        className="mt-auto mx-auto px-4 py-2 bg-gray-100 text-gray-500 rounded-lg hover:bg-gray-300 hover:scale-90 transition-all duration-300"
+      >
         View Project
-      </button>
+      </Link>
     </div>
   );
 };

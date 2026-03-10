@@ -5,6 +5,7 @@ import { AutoScrollSkills } from '@/components/AutoScrollSkills';
 import Link from 'next/link';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ProjectCard } from '@/components/ProjectCard';
+import { projects } from '@/lib/projects';
 
 export default function Home() {
   const para1Ref = useScrollAnimation<HTMLParagraphElement>();
@@ -56,22 +57,12 @@ export default function Home() {
 
       {/* about me section */}
       <section id="about-me" className="flex min-h-screen">
-        <div className="flex flex-col items-start pl-50 mt-58">
-          <h1 className="text-[10rem] font-bold text-black leading-none">
-            WHO
+        <div className="flex flex-col items-start pl-50 mt-45">
+          <h1 className="text-[10rem] font-black text-black leading-none">
+            WHO IS
           </h1>
-          <h1 className="text-[10rem] font-bold text-black leading-none">IS</h1>
-          <h1 className="text-[10rem] font-bold text-black relative leading-none">
+          <h1 className="text-[10rem] font-black text-black relative leading-none">
             RYAN?
-            {/* <span
-              className="absolute text-[24rem] font-semibold text-black"
-              style={{
-                top: '-180px',
-                left: '280px',
-              }}
-            >
-              ?
-            </span> */}
           </h1>
         </div>
 
@@ -95,8 +86,8 @@ export default function Home() {
           <p ref={para3Ref} className="mt-15 fade-in-scroll text-black">
             TODAY, I AM FOCUSED ON MOVING FORWARD AT MY OWN PACE, LEARNING
             THROUGH EXPERIENCE BY BUILDING PROJECT THAT FEEL MEANINGFUL. I TRULY
-            VALUE CONSISTENCY OVER SPEED, AS I BELIEVE THAT PROGRESS DERIVES
-            FROM STAYING CURIOUS, PATIENT, AND HONEST WITH THE PROCESS
+            VALUE CONSISTENCY OVER SPEED, AS I BELIEVE THAT PROGRESS COMES FROM
+            STAYING CURIOUS, PATIENT, AND HONEST WITH THE PROCESS
           </p>
         </div>
       </section>
@@ -236,36 +227,16 @@ export default function Home() {
             {/* project cards */}
             <div className="overflow-auto">
               <div className="flex gap-8 pb-8 px-20 w-max">
-                <ProjectCard
-                  title="PORTFOLIO WEBSITE"
-                  description="YOU'RE LOOKING AT IT! A PERSONAL PORTFOLIO WEBSITE BUILT WITH NEXT.JS AND TAILWIND CSS."
-                  field="WEB DEVELOPMENT"
-                  role="FULL-STACK DEVELOPER"
-                />
-                <ProjectCard
-                  title="GRANT OUTCOME ANALYSIS TOOL"
-                  description="A DASHBOARD THAT ANALYSES THE OUTCOMES OF UNIVERSITY GRANTS, SUPPORTING INTERNAL REPORTING AND DECISION-MAKING."
-                  field="WEB DEVELOPMENT"
-                  role="BACKEND DEVELOPER"
-                />
-                <ProjectCard
-                  title="TAXI GAME"
-                  description="AN INTERACTIVE 2D TAXI SIMULATION GAME BUILT WITH JAVA."
-                  field="OBJECT-ORIENTED PROGRAMMING"
-                  role="SOLO DEVELOPER"
-                />
-                <ProjectCard
-                  title="TEXT AUTOCOMPLETION"
-                  description="A TOOL THAT SUGGESTS COMPLETIONS FOR TEXT INPUTS, BUILT USING C"
-                  field="ALGORITHMS AND DATA STRUCTURES"
-                  role="SOLO DEVELOPER"
-                />
-                <ProjectCard
-                  title="TRAFFIC SIGN PREDICTION"
-                  description="BUILT AND CRITICALLY ANALYSED SUPERVISED MACHINE LEARNING METHODS FOR CLASSIFYING GERMAN TRAFFIC SIGNS."
-                  field="MACHINE LEARNING"
-                  role="SOLO DEVELOPER"
-                />
+                {projects.map((project) => (
+                  <ProjectCard
+                    key={project.slug}
+                    title={project.title}
+                    description={project.descriptionCard}
+                    field={project.field}
+                    role={project.role}
+                    slug={project.slug}
+                  />
+                ))}
               </div>
             </div>
           </div>
