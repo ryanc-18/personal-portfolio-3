@@ -48,6 +48,7 @@ export function AutoScrollSkills() {
   return (
     <>
       <div className="relative h-full">
+        {/* corner crosses */}
         <svg
           className="absolute -top-10 -left-10 z-10"
           width="60"
@@ -147,6 +148,7 @@ export function AutoScrollSkills() {
             strokeWidth="1.5"
           />
         </svg>
+        {/* scrollable content */}
         <div ref={scrollRef} className="h-full overflow-hidden">
           <div className="space-y-8">
             {skills.map((skill, index) => (

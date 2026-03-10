@@ -21,7 +21,7 @@ export function useScrollAnimation<T extends HTMLElement>(
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 1.0 }
     );
 
     observer.observe(element);
