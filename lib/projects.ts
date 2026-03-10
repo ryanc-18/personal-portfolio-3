@@ -66,8 +66,8 @@ export const projects = [
       { name: 'NumPy', category: 'LIBRARY' },
       { name: 'Pandas', category: 'LIBRARY' },
     ],
-    mediaType: 'image',
-    mediaUrl: '/images/traffic-sign-prediction.png',
+    mediaType: 'pdf',
+    mediaUrl: '/pdfs/ML - A2 Report - Traffic Sign Prediction.pdf',
   },
   {
     slug: 'text-autocompletion',
