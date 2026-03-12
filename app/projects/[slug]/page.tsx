@@ -2,7 +2,8 @@ import { projects } from '@/lib/projects';
 import { ArrowLeft, Home, Code2, Archive } from 'lucide-react';
 import Link from 'next/link';
 import { PDFPreviewCard } from '@/components/PDFPreviewCard';
-import PageLayout from '@/components/PageLayout';
+import ProjectPageLayout from '@/components/ProjectPageLayout';
+import { ProjectNav } from '@/components/ProjectNav';
 
 interface ProjectPageProps {
   params: Promise<{
@@ -23,17 +24,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return <div>Project not found</div>;
   }
 
+  // index of current project for project page navigation
+  const currentIndex = projects.findIndex((p) => p.slug === slug);
+  const prevProject = projects[currentIndex - 1] ?? null;
+  const nextProject = projects[currentIndex + 1] ?? null;
+
   return (
-    <PageLayout>
+    <ProjectPageLayout>
+      <ProjectNav
+        projects={projects}
+        currentIndex={currentIndex}
+        prevProject={prevProject}
+        nextProject={nextProject}
+      />
       <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-8">
         <div className="w-full max-w-7xl">
-          {/* Back arrow - top left
-        <Link
-          href="/"
-          className="absolute top-8 left-8 w-10 h-10 z-10 rounded-full bg-neutral-800 text-white flex items-center justify-center hover:bg-neutral-700 transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5" />
-        </Link> */}
           <div className="flex relative gap-8 items-center">
             {/* left side content */}
             <div className="flex-1 flex flex-col justify-center p-5 relative min-h-[600px]">
@@ -157,6 +162,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </div>
-    </PageLayout>
+    </ProjectPageLayout>
   );
 }

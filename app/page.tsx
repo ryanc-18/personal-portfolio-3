@@ -12,6 +12,11 @@ export default function Home() {
   const para2Ref = useScrollAnimation<HTMLParagraphElement>();
   const para3Ref = useScrollAnimation<HTMLParagraphElement>();
 
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <PageLayout>
       {/* home section */}
@@ -39,18 +44,18 @@ export default function Home() {
             className="flex mt-20 gap-4 justify-center animate-fade-in"
             style={{ animationDelay: '0.6s' }}
           >
-            <Link
-              href="/about"
+            <button
+              onClick={() => scrollTo('projects')}
               className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 hover:scale-105 transition-all duration-300"
             >
               View My Work
-            </Link>
-            <Link
-              href="/contact"
+            </button>
+            <button
+              onClick={() => scrollTo('contact')}
               className="px-6 py-3 border-2 border-black text-black rounded-lg hover:bg-black hover:text-white hover:scale-105 transition-all duration-300"
             >
               Get In Touch
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -241,13 +246,106 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* LIST OF PROJECTS I'VE DONE:
-        - Grant outcome analysis tool - next.js, typescript, postgreSQL
-        - Taxi game - java
-        - Text autocomplete - C
-        - Scam Detector - Python, scikit-learn, pandas
-        - 
-         */}
+      </section>
+
+      <section
+        id="contact"
+        className="flex min-h-screen flex-col items-center justify-between"
+      >
+        <div />
+        {/* main content */}
+        <div className="flex flex-col items-center text-center space-y-16">
+          <div className="relative flex flex-col items-center">
+            <svg
+              className="absolute top-4 -left-20 z-10"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              style={{ opacity: 0.5 }}
+            >
+              <line
+                x1="20"
+                y1="0"
+                x2="20"
+                y2="40"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+              <line
+                x1="0"
+                y1="20"
+                x2="40"
+                y2="20"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <svg
+              className="absolute top-4 -right-24 z-10"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              style={{ opacity: 0.5 }}
+            >
+              <line
+                x1="20"
+                y1="0"
+                x2="20"
+                y2="40"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+              <line
+                x1="0"
+                y1="20"
+                x2="40"
+                y2="20"
+                stroke="#9ca3af"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <h1 className="text-black font-semibold text-7xl">LET'S BUILD</h1>
+            <h1 className="text-black font-semibold text-7xl">
+              SOMETHING TOGETHER
+            </h1>
+          </div>
+          {/* email */}
+          <div className="flex flex-col items-center space-y-3">
+            <p className="text-gray-400 text-xs tracking-widest">
+              ( GET IN TOUCH )
+            </p>
+            <a
+              href="ryan.ckv5@gmail.com"
+              className="text-2xl font-bold text-black hover:text-gray-500 transition colors duration-300"
+            >
+              RYAN.CKV5@GMAIL.COM
+            </a>
+          </div>
+
+          {/* social links */}
+          <div className="flex gap-8">
+            <a
+              href="https://github.com/ryanc-18"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 border border-black text-black text-sm font-bold rounded-full hover:bg-black hover:text-white transition-all duration-300"
+            >
+              GitHub
+            </a>
+            <a
+              href="linkedin.com/in/ryan-chin-4791a7314"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 border border-black text-black text-sm font-bold rounded-full hover:bg-black hover:text-white transition-all duration-300"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        {/* footer */}
+        <p className="text-gray-400 text-xs tracking-widest pb-10">
+          DESIGNED & BUILT BY RYAN CHIN © 2025
+        </p>
       </section>
     </PageLayout>
   );
