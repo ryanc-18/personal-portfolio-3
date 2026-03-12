@@ -30,7 +30,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const nextProject = projects[currentIndex + 1] ?? null;
 
   return (
-    <ProjectPageLayout>
+    <ProjectPageLayout currentIndex={currentIndex} total={projects.length}>
       <ProjectNav
         projects={projects}
         currentIndex={currentIndex}
