@@ -61,39 +61,44 @@ export default function Home() {
       </section>
 
       {/* about me section */}
-      <section id="about-me" className="flex min-h-screen">
-        <div className="flex flex-col items-start pl-50 mt-45">
-          <h1 className="text-[10rem] font-black text-black leading-none">
-            WHO IS
-          </h1>
-          <h1 className="text-[10rem] font-black text-black relative leading-none">
-            RYAN?
-          </h1>
-        </div>
+      <section
+        id="about-me"
+        className="flex min-h-screen items-center justify-center"
+      >
+        <div className="flex">
+          <div className="flex flex-col items-start pl-50 mt-45 sticky top-24 self-start">
+            <h1 className="text-[10rem] font-black text-black leading-none">
+              WHO IS
+            </h1>
+            <h1 className="text-[10rem] font-black text-black relative leading-none">
+              RYAN?
+            </h1>
+          </div>
 
-        <div className="text-black pl-50 pr-20 mt-30 text-xl p-10">
-          <p className="text-gray-400">( bio )</p>
-          <p ref={para1Ref} className="fade-in-scroll text-black mt-8">
-            RYAN CHIN, 20 YEARS OLD, LIVING IN MELBOURNE, AUSTRALIA. BORN AND
-            RAISED IN MALAYSIA, I CAME TO AUSTRALIA TO PURSUE MY STUDIES IN
-            COMPUTER SCIENCE. ALTHOUGH MY ACADEMIC PATH HAD BEEN A CHALLENGE, MY
-            PASSION FOR BUILDING MEANINGFUL SOFTWARE THAT CREATES IMPACT HAS
-            ALWAYS PROPELLED ME FORWARD.
-          </p>
-          <p ref={para2Ref} className="mt-15 fade-in-scroll text-black">
-            MY JOURNEY INTO WEB DEVELOPMENT BEGAN WHEN I STARTED MY FIRST
-            INTERNSHIP AT A LOCAL TECH COMPANY. THERE, I HAD THE OPPORTUNITY TO
-            WORK ON REAL-WORLD PROJECTS AND LEARN FROM EXPERIENCED DEVELOPERS.
-            THIS EXPERIENCE FURTHER IGNITED MY PASSION TO BRIDGE THE GAP BETWEEN
-            FRUSTRATING INEFFICIENCIES AND ELEGANT DIGITAL SOLUTIONS THAT TRULY
-            HELP PEOPLE.
-          </p>
-          <p ref={para3Ref} className="mt-15 fade-in-scroll text-black">
-            TODAY, I AM FOCUSED ON MOVING FORWARD AT MY OWN PACE, LEARNING
-            THROUGH EXPERIENCE BY BUILDING PROJECT THAT FEEL MEANINGFUL. I TRULY
-            VALUE CONSISTENCY OVER SPEED, AS I BELIEVE THAT PROGRESS COMES FROM
-            STAYING CURIOUS, PATIENT, AND HONEST WITH THE PROCESS
-          </p>
+          <div className="text-black pl-50 pr-20 mt-30 text-xl p-10">
+            <p className="text-gray-400">( bio )</p>
+            <p ref={para1Ref} className="fade-in-scroll text-black mt-8">
+              RYAN CHIN, 20 YEARS OLD, LIVING IN MELBOURNE, AUSTRALIA. BORN AND
+              RAISED IN MALAYSIA, I CAME TO AUSTRALIA TO PURSUE MY STUDIES IN
+              COMPUTER SCIENCE. ALTHOUGH MY ACADEMIC PATH HAD BEEN A CHALLENGE,
+              MY PASSION FOR BUILDING MEANINGFUL SOFTWARE THAT CREATES IMPACT
+              HAS ALWAYS PROPELLED ME FORWARD.
+            </p>
+            <p ref={para2Ref} className="mt-15 fade-in-scroll text-black">
+              MY JOURNEY INTO WEB DEVELOPMENT BEGAN WHEN I STARTED MY FIRST
+              INTERNSHIP AT A LOCAL TECH COMPANY. THERE, I HAD THE OPPORTUNITY
+              TO WORK ON REAL-WORLD PROJECTS AND LEARN FROM EXPERIENCED
+              DEVELOPERS. THIS EXPERIENCE FURTHER IGNITED MY PASSION TO BRIDGE
+              THE GAP BETWEEN FRUSTRATING INEFFICIENCIES AND ELEGANT DIGITAL
+              SOLUTIONS THAT TRULY HELP PEOPLE.
+            </p>
+            <p ref={para3Ref} className="mt-15 fade-in-scroll text-black">
+              TODAY, I AM FOCUSED ON MOVING FORWARD AT MY OWN PACE, LEARNING
+              THROUGH EXPERIENCE BY BUILDING PROJECT THAT FEEL MEANINGFUL. I
+              TRULY VALUE CONSISTENCY OVER SPEED, AS I BELIEVE THAT PROGRESS
+              COMES FROM STAYING CURIOUS, PATIENT, AND HONEST WITH THE PROCESS
+            </p>
+          </div>
         </div>
       </section>
 
@@ -333,7 +338,7 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="linkedin.com/in/ryan-chin-4791a7314"
+              href="https://www.linkedin.com/in/ryan-chin-4791a7314/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border border-black text-black text-sm font-bold rounded-full hover:bg-black hover:text-white transition-all duration-300"
