@@ -37,7 +37,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         prevProject={prevProject}
         nextProject={nextProject}
       />
-      <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-8">
+      <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-8 pb-20">
         <div className="w-full max-w-7xl">
           <div className="flex relative gap-8 items-center">
             {/* left side content */}
