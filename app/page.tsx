@@ -320,7 +320,7 @@ export default function Home() {
               ( GET IN TOUCH )
             </p>
             <a
-              href="ryan.ckv5@gmail.com"
+              href="mailto:ryan.ckv5@gmail.com"
               className="text-2xl font-bold text-black hover:text-gray-500 transition colors duration-300"
             >
               RYAN.CKV5@GMAIL.COM
