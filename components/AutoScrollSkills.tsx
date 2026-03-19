@@ -17,27 +17,27 @@ const skills = [
 
 export function AutoScrollSkills() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const isScrollingDown = useRef(true);
+  const position = useRef(0);
+  const direction = useRef(1); // 1 = down, -1 = up
 
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
     const scroll = () => {
-      if (!container) return;
-
       const maxScroll = container.scrollHeight - container.clientHeight;
-      const currentScroll = container.scrollTop;
 
-      // Reverse direction at boundaries
-      if (currentScroll >= maxScroll) {
-        isScrollingDown.current = false;
-      } else if (currentScroll <= 0) {
-        isScrollingDown.current = true;
+      position.current += direction.current;
+
+      if (position.current >= maxScroll) {
+        position.current = maxScroll;
+        direction.current = -1;
+      } else if (position.current <= 0) {
+        position.current = 0;
+        direction.current = 1;
       }
 
-      // Scroll 1px in current direction
-      container.scrollTop += isScrollingDown.current ? 1 : -1;
+      container.scrollTop = position.current;
     };
 
     const intervalId = setInterval(scroll, 15);
