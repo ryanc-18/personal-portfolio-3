@@ -37,11 +37,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         prevProject={prevProject}
         nextProject={nextProject}
       />
-      <div className="min-h-screen bg-neutral-100 flex items-center justify-center p-8 pb-20">
+      <div className="h-full bg-neutral-100 flex items-center justify-center p-4 xl:p-6 pb-12 xl:pb-16 overflow-hidden">
         <div className="w-full max-w-7xl">
-          <div className="flex relative gap-8 items-center">
+          <div className="flex relative gap-4 xl:gap-6 items-center">
             {/* left side content */}
-            <div className="flex-1 flex flex-col justify-center p-5 relative min-h-[600px]">
+            <div className="flex-1 flex flex-col justify-center p-3 xl:p-5 relative min-h-0">
               {project.mediaType === 'portfolio' && (
                 <div className="flex flex-col items-center justify-center text-center space-y-8 max-w-md">
                   {/* Decorative Circle */}
@@ -90,7 +90,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               )}
 
               {project.mediaType === 'none' && (
-                <div className="flex-1 flex items-center justify-center p-12 relative min-h-[600px]">
+                <div className="flex-1 flex items-center justify-center p-12 relative">
                   <div className="max-w-md text-center space-y-6">
                     <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-neutral-200 text-neutral-500">
                       <Archive className="w-12 h-12" />
@@ -116,12 +116,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
             {/* right side content */}
             <div className="flex-1">
-              <div className="bg-white rounded-3xl p-12 shadow-2xl min-h-[600px] flex items-center">
-                <div className="space-y-8">
-                  <h1 className="text-5xl text-black font-bold tracking-tight">
+              <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-2xl flex items-center">
+                <div className="space-y-5">
+                  <h1 className="text-4xl text-black font-bold tracking-tight">
                     {project.title}
                   </h1>
-                  <p className="text-neutral-700 leading-relaxed uppercase tracking-wide">
+                  <p className="text-neutral-700 leading-relaxed uppercase tracking-wide text-sm">
                     {project.descriptionPage}
                   </p>
                   <div className="flex gap-3 text-sm uppercase tracking-wider text-neutral-600">
@@ -129,19 +129,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     <span>|</span>
                     <span>{project.role}</span>
                   </div>
-                  <div className="space-y-4 pt-4">
-                    <h2 className="text-xl font-bold tracking-tight uppercase text-neutral-800">
+                  <div className="space-y-3 pt-2">
+                    <h2 className="text-lg font-bold tracking-tight uppercase text-neutral-800">
                       Tech Stack
                     </h2>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-2">
                       {project.techStack.map((tech, index) => (
                         <div
                           key={tech.name}
-                          className="p-4 bg-white/50 backdrop-blur border border-neutral-300 rounded-lg hover:border-neutral-800 hover:shadow-md transition-all group cursor-pointer"
+                          className="p-3 bg-white/50 backdrop-blur border border-neutral-300 rounded-lg hover:border-neutral-800 hover:shadow-md transition-all group cursor-pointer"
                         >
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform">
-                              <Code2 className="w-5 h-5 text-white" />
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <Code2 className="w-4 h-4 text-white" />
                             </div>
                             <div>
                               <p className="font-semibold text-neutral-800">
