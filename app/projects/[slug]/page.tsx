@@ -1,5 +1,5 @@
 import { projects } from '@/lib/projects';
-import { ArrowLeft, Home, Code2, Archive } from 'lucide-react';
+import { ArrowLeft, Home, Code2, Archive, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { PDFPreviewCard } from '@/components/PDFPreviewCard';
 import ProjectPageLayout from '@/components/ProjectPageLayout';
@@ -86,6 +86,60 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     controls
                     className="w-full h-full object-cover"
                   />
+                </div>
+              )}
+
+              {project.mediaType === 'link' && (
+                <div className="flex flex-col items-center justify-center text-center space-y-8 max-w-md">
+                  <div className="relative">
+                    <a
+                      href={project.mediaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-75 transition-opacity duration-200"
+                    >
+                    <svg
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      role="img"
+                      width="192"
+                      height="192"
+                    >
+                      <rect
+                        x="12"
+                        y="6"
+                        width="8"
+                        height="36"
+                        rx="4"
+                        fill="#2D3E9E"
+                      />
+                      <g transform="rotate(34 26 15)">
+                        <path
+                          d="M26 5.5C20.5 5.5 16 10 16 15.5 16 23.1 26 32.5 26 32.5S36 23.1 36 15.5C36 10 31.5 5.5 26 5.5Z M30 15.5A4 4 0 1 0 22 15.5A4 4 0 1 0 30 15.5Z"
+                          fill="#8090D8"
+                          fillRule="evenodd"
+                        />
+                      </g>
+                    </svg>
+                    </a>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-neutral-800">
+                      THIS ONE'S LIVE.
+                    </h3>
+                    <p className="text-neutral-600 leading-relaxed">
+                      Pinnote is a real product. Click below to open the app.
+                    </p>
+                  </div>
+                  <a
+                    href={project.mediaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-4 bg-neutral-800 text-white rounded-full hover:bg-neutral-700 transition-all hover:scale-105 flex items-center gap-3 group"
+                  >
+                    <span className="font-medium">OPEN PINNOTE</span>
+                    <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </a>
                 </div>
               )}
 

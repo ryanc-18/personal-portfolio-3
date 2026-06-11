@@ -1,22 +1,24 @@
 export const projects = [
   {
-    slug: 'personal-portfolio',
-    title: 'PORTFOLIO WEBSITE',
+    slug: 'pinnote',
+    title: 'PINNOTE',
     descriptionCard:
-      "YOU'RE LOOKING AT IT! A PERSONAL PORTFOLIO WEBSITE BUILT WITH NEXT.JS AND TAILWIND CSS.",
+      'ANNOTATE PDFs WITH PINNED NOTES, EXACTLY WHERE YOUR THOUGHTS HAPPEN',
     descriptionPage:
-      'A minimalist portfolio website designed to present my projects, technical skills, and the motivation behind my software development journey. Built from scratch to demonstrate proficiency with modern web technologies while maintaining clean, user-focused design.',
+      'Pinnote lets you drop numbered pins anywhere on a PDF page and write notes that stay anchored to that exact spot. Everything lives in one workspace, organized into folders you build yourself, so when you come back to a document, every thought is right where you left it.',
     field: 'WEB DEVELOPMENT',
-    role: 'FULL-STACK DEVELOPER',
+    role: 'FOUNDER, FULL-STACK DEVELOPER',
     techStack: [
       { name: 'Next.js', category: 'FRAMEWORK' },
       { name: 'Tailwind CSS', category: 'STYLING' },
       { name: 'TypeScript', category: 'LANGUAGE' },
+      { name: 'Supabase', category: 'DATABASE' },
       { name: 'Vercel', category: 'DEPLOYMENT' },
+      { name: 'Clerk', category: 'AUTH' },
       { name: 'GitHub', category: 'VERSION CONTROL' },
     ],
-    mediaType: 'portfolio',
-    mediaUrl: undefined,
+    mediaType: 'link',
+    mediaUrl: 'https://pinnote.co',
   },
   {
     slug: 'grant-outcome-analysis',
@@ -37,6 +39,25 @@ export const projects = [
     ],
     mediaType: 'video',
     mediaUrl: '/videos/GAOTool.mp4',
+  },
+  {
+    slug: 'personal-portfolio',
+    title: 'PORTFOLIO WEBSITE',
+    descriptionCard:
+      "YOU'RE LOOKING AT IT! A PERSONAL PORTFOLIO WEBSITE BUILT WITH NEXT.JS AND TAILWIND CSS.",
+    descriptionPage:
+      'A minimalist portfolio website designed to present my projects, technical skills, and the motivation behind my software development journey. Built from scratch to demonstrate proficiency with modern web technologies while maintaining clean, user-focused design.',
+    field: 'WEB DEVELOPMENT',
+    role: 'FULL-STACK DEVELOPER',
+    techStack: [
+      { name: 'Next.js', category: 'FRAMEWORK' },
+      { name: 'Tailwind CSS', category: 'STYLING' },
+      { name: 'TypeScript', category: 'LANGUAGE' },
+      { name: 'Vercel', category: 'DEPLOYMENT' },
+      { name: 'GitHub', category: 'VERSION CONTROL' },
+    ],
+    mediaType: 'portfolio',
+    mediaUrl: undefined,
   },
   {
     slug: 'taxi-game',
