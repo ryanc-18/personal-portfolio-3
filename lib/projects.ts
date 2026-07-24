@@ -1,5 +1,25 @@
 export const projects = [
   {
+    slug: 'hubict',
+    title: 'HUBICT',
+    descriptionCard:
+      'A MODERN, MINIMALIST WEBSITE FOR A MICROSOFT LICENSING & IT ADVISORY, BUILT TO HELP THEM LOOK CREDIBLE AND WIN CLIENTS',
+    descriptionPage:
+      "HubICT is an independent Microsoft licensing and IT advisor competing against many big competitors, so the entire site is built around one job: making an independent advisory feel just as credible as the larger names it's up against. Every design decision was deliberate, like the restrained colour palette chosen to signal professionalism, clear visual hierarchy to guide the eye without demanding it, and a page flow structured around how a cautious buyer actually builds trust by understanding the service, seeing the results, then reaching out when ready. The goal was to replace an outdated, templated old site with something that reads as considered and trustworthy, rather than another generic small-business website.",
+    field: 'WEB DEVELOPMENT',
+    role: 'FREELANCE',
+    techStack: [
+      { name: 'Next.js', category: 'FRAMEWORK' },
+      { name: 'Tailwind CSS', category: 'STYLING' },
+      { name: 'TypeScript', category: 'LANGUAGE' },
+      { name: 'Vercel', category: 'DEPLOYMENT' },
+      { name: 'GitHub', category: 'VERSION CONTROL' },
+    ],
+    mediaType: 'link',
+    mediaUrl: 'https://hubict.vercel.app/',
+    logoUrl: '/images/hubict-logo-icon-transparent.png',
+  },
+  {
     slug: 'pinnote',
     title: 'PINNOTE',
     descriptionCard:
@@ -19,6 +39,7 @@ export const projects = [
     ],
     mediaType: 'link',
     mediaUrl: 'https://pinnote.co',
+    logoUrl: '/images/pinnote-logo.png',
   },
   {
     slug: 'grant-outcome-analysis',

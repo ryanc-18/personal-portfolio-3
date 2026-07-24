@@ -98,29 +98,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       rel="noopener noreferrer"
                       className="hover:opacity-75 transition-opacity duration-200"
                     >
-                    <svg
-                      viewBox="0 0 48 48"
-                      fill="none"
-                      role="img"
-                      width="192"
-                      height="192"
-                    >
-                      <rect
-                        x="12"
-                        y="6"
-                        width="8"
-                        height="36"
-                        rx="4"
-                        fill="#2D3E9E"
+                      <img
+                        src={project.logoUrl}
+                        alt={`${project.title} logo`}
+                        className="w-48 h-48 object-contain"
                       />
-                      <g transform="rotate(34 26 15)">
-                        <path
-                          d="M26 5.5C20.5 5.5 16 10 16 15.5 16 23.1 26 32.5 26 32.5S36 23.1 36 15.5C36 10 31.5 5.5 26 5.5Z M30 15.5A4 4 0 1 0 22 15.5A4 4 0 1 0 30 15.5Z"
-                          fill="#8090D8"
-                          fillRule="evenodd"
-                        />
-                      </g>
-                    </svg>
                     </a>
                   </div>
                   <div className="space-y-4">
