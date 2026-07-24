@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     slug: 'pinnote',
-    title: 'PINNOTE',
+    title: 'Pinnote',
     descriptionCard:
       'ANNOTATE PDFs WITH PINNED NOTES, EXACTLY WHERE YOUR THOUGHTS HAPPEN',
     descriptionPage:

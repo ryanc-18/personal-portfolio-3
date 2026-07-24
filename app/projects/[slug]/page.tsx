@@ -110,7 +110,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       THIS ONE'S LIVE.
                     </h3>
                     <p className="text-neutral-600 leading-relaxed">
-                      Pinnote is a real product. Click below to open the app.
+                      {project.title} is a real product. Click below to open the
+                      app.
                     </p>
                   </div>
                   <a
@@ -119,7 +120,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-neutral-800 text-white rounded-full hover:bg-neutral-700 transition-all hover:scale-105 flex items-center gap-3 group"
                   >
-                    <span className="font-medium">OPEN PINNOTE</span>
+                    <span className="font-medium uppercase">
+                      open {project.title}
+                    </span>
                     <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </a>
                 </div>
@@ -154,7 +157,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <div className="flex-1">
               <div className="bg-white rounded-3xl p-6 lg:p-8 shadow-2xl flex items-center">
                 <div className="space-y-5">
-                  <h1 className="text-4xl text-black font-bold tracking-tight">
+                  <h1 className="text-4xl text-black font-bold tracking-tight uppercase">
                     {project.title}
                   </h1>
                   <p className="text-neutral-700 leading-relaxed uppercase tracking-wide text-sm">
