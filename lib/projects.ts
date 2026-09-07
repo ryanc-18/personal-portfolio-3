@@ -16,7 +16,7 @@ export const projects = [
       { name: 'GitHub', category: 'VERSION CONTROL' },
     ],
     mediaType: 'link',
-    mediaUrl: 'https://hubict.vercel.app/',
+    mediaUrl: 'https://www.hubict.com.au/',
     logoUrl: '/images/hubict-logo-icon-transparent.png',
   },
   {
